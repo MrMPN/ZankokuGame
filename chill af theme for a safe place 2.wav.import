@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ccub62w26a3gr"
+path="res://.godot/imported/chill af theme for a safe place 2.wav-6f4735176048ac802a8cf59745ab7408.sample"
+
+[deps]
+
+source_file="res://chill af theme for a safe place 2.wav"
+dest_files=["res://.godot/imported/chill af theme for a safe place 2.wav-6f4735176048ac802a8cf59745ab7408.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
