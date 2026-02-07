@@ -8,8 +8,8 @@ extends Control
 @onready var starcontainer = $StarContainer
 @onready var planetcontainer = $PlanetContainer
 
-@onready var planet_scene = preload("res://Planets/Rivers/Rivers.tscn") 
-@onready var big_star_scene = preload("res://BackgroundGenerator/BigStar.tscn")
+@onready var planet_scene = preload("res://scenes/title/Planets/Rivers/Rivers.tscn") 
+@onready var big_star_scene = preload("res://scenes/title/BackgroundGenerator/BigStar.tscn")
 
 var should_tile = false
 var reduce_background = false
@@ -262,24 +262,24 @@ func _place_planet(rng: RandomNumberGenerator):
 	else:
 		print("BG_GEN: Current Palette is empty or invalid!")
 
-	if planet.has_method("set_seed"):
+	if planet.has_method(&"set_seed"):
 		planet.set_seed(rng.randf() * 100.0)
 	
 	planetcontainer.add_child(planet)
 	planet_objects.append(planet)
-
+	
 func _place_big_star(rng: RandomNumberGenerator):
 	var pos = Vector2()
 	if should_tile:
 		var offs = 10.0
-		pos = Vector2(int(rng.randf_range(offs, size.x - offs)), int(rng.randf_range(offs, size.y - offs)))
+		pos = Vector2(rng.randf_range(offs, size.x - offs), rng.randf_range(offs, size.y - offs))
 	else:
-		pos = Vector2(int(rng.randf_range(0, size.x)), int(rng.randf_range(0, size.y)))
+		pos = Vector2(rng.randf_range(0.0, size.x), rng.randf_range(0.0, size.y))
 	var star = big_star_scene.instantiate()
 	star.position = pos
 	star.custom_speed = glitter_speed
 	star.custom_intensity = glitter_intensity
-	if star.has_method("set_rng_seed"):
+	if star.has_method(&"set_rng_seed"):
 		star.set_rng_seed(rng.randi())
 	starcontainer.add_child(star)
 	star_objects.append(star)
@@ -294,7 +294,7 @@ func _set_new_colors(new_scheme, new_background):
 	for p in planet_objects:
 		if p.material: p.material.set_shader_parameter("colorscheme", colorscheme)
 	for s in star_objects:
-		if s.material: s.material.set_shader_parameter("colorscheme", colorscheme)
+		if s.material is ShaderMaterial: s.material.set_shader_parameter("colorscheme", colorscheme)
 
 func set_background_color(c):
 	background.color = c

@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://dps3a86l4ur23"]
 
-[ext_resource type="Texture2D" uid="uid://barbjo80tnqjw" path="res://BackgroundGenerator/stars-special.png" id="1"]
-[ext_resource type="Texture2D" uid="uid://cnsd441bt57hu" path="res://BackgroundGenerator/Colorscheme.tres" id="2"]
-[ext_resource type="Script" uid="uid://ow5f37oswcua" path="res://BackgroundGenerator/BigStar.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://barbjo80tnqjw" path="res://scenes/title/BackgroundGenerator/stars-special.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://cnsd441bt57hu" path="res://scenes/title/BackgroundGenerator/Colorscheme.tres" id="2"]
+[ext_resource type="Script" uid="uid://ow5f37oswcua" path="res://scenes/title/BackgroundGenerator/BigStar.gd" id="3"]
 
 [sub_resource type="Shader" id="1"]
 code = "shader_type canvas_item;

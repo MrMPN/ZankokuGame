@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://bsob6dlqx5rcc"]
 
-[ext_resource type="Script" uid="uid://b8qkmsykmig1w" path="res://BackgroundGenerator/BackgroundGenerator.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://cnsd441bt57hu" path="res://BackgroundGenerator/Colorscheme.tres" id="2"]
-[ext_resource type="Material" uid="uid://b8dedowgpjyyl" path="res://BackgroundGenerator/StarStuff.tres" id="3"]
-[ext_resource type="Texture2D" uid="uid://b4q3omarb7k02" path="res://BackgroundGenerator/stars.png" id="4"]
-[ext_resource type="Material" uid="uid://dx1qcrius0xtl" path="res://BackgroundGenerator/StarParticles.tres" id="5"]
-[ext_resource type="Material" uid="uid://smwlse26kjcb" path="res://BackgroundGenerator/Nebulae.tres" id="6"]
+[ext_resource type="Script" uid="uid://b8qkmsykmig1w" path="res://scenes/title/BackgroundGenerator/BackgroundGenerator.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cnsd441bt57hu" path="res://scenes/title/BackgroundGenerator/Colorscheme.tres" id="2"]
+[ext_resource type="Material" uid="uid://b8dedowgpjyyl" path="res://scenes/title/BackgroundGenerator/StarStuff.tres" id="3"]
+[ext_resource type="Texture2D" uid="uid://b4q3omarb7k02" path="res://scenes/title/BackgroundGenerator/stars.png" id="4"]
+[ext_resource type="Material" uid="uid://dx1qcrius0xtl" path="res://scenes/title/BackgroundGenerator/StarParticles.tres" id="5"]
+[ext_resource type="Material" uid="uid://smwlse26kjcb" path="res://scenes/title/BackgroundGenerator/Nebulae.tres" id="6"]
 
 [sub_resource type="CanvasItemMaterial" id="1"]
 particles_animation = true

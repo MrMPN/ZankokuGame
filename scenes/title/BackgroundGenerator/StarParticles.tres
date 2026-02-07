@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" format=3 uid="uid://dx1qcrius0xtl"]
 
-[ext_resource type="Texture2D" uid="uid://cnsd441bt57hu" path="res://BackgroundGenerator/Colorscheme.tres" id="1_5tdag"]
+[ext_resource type="Texture2D" uid="uid://cnsd441bt57hu" path="res://scenes/title/BackgroundGenerator/Colorscheme.tres" id="1_5tdag"]
 
 [sub_resource type="Shader" id="1"]
 code = "shader_type particles;
@@ -68,7 +68,7 @@ void process() {
 
 [resource]
 shader = SubResource("1")
-shader_parameter/screen_size = Vector2(800, 451.5)
+shader_parameter/screen_size = Vector2(800, 450)
 shader_parameter/colorscheme = ExtResource("1_5tdag")
 shader_parameter/scale_min = 0.3
 shader_parameter/scale_max = 0.7

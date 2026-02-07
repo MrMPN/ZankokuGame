@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://BackgroundGenerator/100x100.png" type="Texture2D" id=1]
-[ext_resource path="res://BackgroundGenerator/Colorscheme.tres" type="Texture2D" id=2]
-[ext_resource path="res://BackgroundGenerator/Planet.gd" type="Script" id=3]
+[ext_resource path="res://scenes/title/BackgroundGenerator/100x100.png" type="Texture2D" id=1]
+[ext_resource path="res://scenes/title/BackgroundGenerator/Colorscheme.tres" type="Texture2D" id=2]
+[ext_resource path="res://scenes/title/BackgroundGenerator/Planet.gd" type="Script" id=3]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;

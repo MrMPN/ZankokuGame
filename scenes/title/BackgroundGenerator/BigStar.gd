@@ -13,9 +13,9 @@ func _ready():
 		if not texture.resource_local_to_scene:
 			texture = texture.duplicate()
 		
-		# Pick a random star shape
-		if "region" in texture:
-			texture.region.position.x = (randi() % 5) * 25.0
+	# Pick a random star shape
+	if texture is AtlasTexture:
+		texture.region.position.x = (randi() % 5) * 25.0
 	
 	# Random starting point for the animation
 	random_offset = randf() * 100.0
@@ -37,8 +37,8 @@ func set_rng_seed(val: int):
 	# Simple pseudo-random math to pick the same texture frame every time for this seed
 	var pseudo_rand = (val * 16807) % 2147483647
 	
-	if texture and "region" in texture:
+	if texture is AtlasTexture:
 		texture.region.position.x = (pseudo_rand % 5) * 25.0
 	
 	# Deterministic offset
-	random_offset = float(pseudo_rand % 100)
+	random_offset = pseudo_rand % 100 as float

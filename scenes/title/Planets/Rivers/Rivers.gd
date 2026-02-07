@@ -1,5 +1,5 @@
 @tool
-extends "res://Planets/Planet.gd"
+extends "res://scenes/title/Planets/Planet.gd"
 
 # Cache for editor safety
 var _cached_seed: float = 0.0

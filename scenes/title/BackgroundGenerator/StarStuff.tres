@@ -1,7 +1,7 @@
-[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://b8dedowgpjyyl"]
+[gd_resource type="ShaderMaterial" format=3 uid="uid://b8dedowgpjyyl"]
 
-[ext_resource type="Texture2D" uid="uid://cnsd441bt57hu" path="res://BackgroundGenerator/Colorscheme.tres" id="1"]
-[ext_resource type="Shader" uid="uid://3cnyew5xefey" path="res://BackgroundGenerator/StarStuff.gdshader" id="2"]
+[ext_resource type="Texture2D" uid="uid://cnsd441bt57hu" path="res://scenes/title/BackgroundGenerator/Colorscheme.tres" id="1"]
+[ext_resource type="Shader" uid="uid://3cnyew5xefey" path="res://scenes/title/BackgroundGenerator/StarStuff.gdshader" id="2"]
 
 [resource]
 shader = ExtResource("2")
@@ -13,6 +13,3 @@ shader_parameter/should_tile = false
 shader_parameter/reduce_background = false
 shader_parameter/colorscheme = ExtResource("1")
 shader_parameter/uv_correct = Vector2(1.7718716, 1)
-shader_parameter/anim_speed = 2.0
-shader_parameter/glitter_strength = 0.8
-shader_parameter/color_count = 8.0

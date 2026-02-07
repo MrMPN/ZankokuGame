@@ -1,4 +1,4 @@
-extends "res://Planets/Planet.gd"
+extends "res://scenes/title/Planets/Planet.gd"
 
 func set_pixels(amount):
 	$Galaxy.material.set_shader_parameter("pixels", amount)
