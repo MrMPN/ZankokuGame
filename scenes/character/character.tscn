@@ -1,6 +1,112 @@
 [gd_scene format=3 uid="uid://bq6edpiknal6n"]
 
-[ext_resource type="Script" uid="uid://b720d7byl8o46" path="res://scenes/character/main_character.gd" id="1_6nn2t"]
+[ext_resource type="Script" uid="uid://b720d7byl8o46" path="res://scenes/character/character.gd" id="1_6nn2t"]
+[ext_resource type="Texture2D" uid="uid://cfhgnjyt6ikiu" path="res://assets/sprites/Eris Esra's Character Template 4.0/16x32/16x32 Walk-Sheet.png" id="1_cuyo6"]
 
-[node name="Character" type="Node2D" unique_id=1396522402]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mutn8"]
+atlas = ExtResource("1_cuyo6")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fgi2k"]
+atlas = ExtResource("1_cuyo6")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8hpl"]
+atlas = ExtResource("1_cuyo6")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ex5l"]
+atlas = ExtResource("1_cuyo6")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bix7t"]
+atlas = ExtResource("1_cuyo6")
+region = Rect2(0, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bblvu"]
+atlas = ExtResource("1_cuyo6")
+region = Rect2(16, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q52vl"]
+atlas = ExtResource("1_cuyo6")
+region = Rect2(32, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l884r"]
+atlas = ExtResource("1_cuyo6")
+region = Rect2(48, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rlhq"]
+atlas = ExtResource("1_cuyo6")
+region = Rect2(0, 128, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oe6dy"]
+atlas = ExtResource("1_cuyo6")
+region = Rect2(16, 128, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cuvpk"]
+atlas = ExtResource("1_cuyo6")
+region = Rect2(32, 128, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvcjf"]
+atlas = ExtResource("1_cuyo6")
+region = Rect2(48, 128, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1pheb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mutn8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fgi2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8hpl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ex5l")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bix7t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bblvu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q52vl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l884r")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rlhq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oe6dy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cuvpk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvcjf")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[node name="Character" type="AnimatedSprite2D" unique_id=1396522402]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_1pheb")
+animation = &"walk_right"
 script = ExtResource("1_6nn2t")

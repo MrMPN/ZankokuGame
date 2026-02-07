@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cs2hgs6mxjm41"]
 
-[ext_resource type="Texture2D" uid="uid://cj4irrlc8hee6" path="res://assets/tiny-spaceships/tinyShip12.png" id="1_p8lcy"]
+[ext_resource type="Texture2D" uid="uid://cj4irrlc8hee6" path="res://assets/sprites/tiny-spaceships/tinyShip12.png" id="1_p8lcy"]
 [ext_resource type="Script" uid="uid://beg6r8nb2xsc2" path="res://scenes/title/Spaceship.gd" id="1_q1owq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jqemp"]
