@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3bxus7hrnriy"
-path="res://.godot/imported/16x16 Interact-Sheet.png-b3e499102b84a50a6d8aa02269830ebf.ctex"
+uid="uid://c01wapy32ikdc"
+path="res://.godot/imported/16x16 Jump-Sheet.png-60e51e7ac1d60ee68cfe7512b5e9257f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Eris Esra's Character Template 4.0/16x16/16x16 Interact-Sheet.png"
-dest_files=["res://.godot/imported/16x16 Interact-Sheet.png-b3e499102b84a50a6d8aa02269830ebf.ctex"]
+source_file="res://assets/Eris Esra's Character Template 4.0/16x16/16x16 Jump-Sheet.png"
+dest_files=["res://.godot/imported/16x16 Jump-Sheet.png-60e51e7ac1d60ee68cfe7512b5e9257f.ctex"]
 
 [params]
 

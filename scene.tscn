@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://1ah7k8fohqj5"]
 
-[ext_resource type="Texture2D" uid="uid://cfhgnjyt6ikiu" path="res://Eris Esra's Character Template 4.0/16x32/16x32 Walk-Sheet.png" id="1_ulcgi"]
+[ext_resource type="Texture2D" uid="uid://cfhgnjyt6ikiu" path="res://assets/Eris Esra's Character Template 4.0/16x32/16x32 Walk-Sheet.png" id="1_ulcgi"]
 [ext_resource type="Script" uid="uid://b720d7byl8o46" path="res://main_character.gd" id="2_yv4w1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nxogm"]

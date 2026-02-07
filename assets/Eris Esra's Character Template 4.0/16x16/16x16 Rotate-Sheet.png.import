@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfhgnjyt6ikiu"
-path="res://.godot/imported/16x32 Walk-Sheet.png-74e44141058c9114b1571eece5eb453d.ctex"
+uid="uid://xuwmrwe207b0"
+path="res://.godot/imported/16x16 Rotate-Sheet.png-3ad075a36ccf23aa3aa47016ed61e29c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Eris Esra's Character Template 4.0/16x32/16x32 Walk-Sheet.png"
-dest_files=["res://.godot/imported/16x32 Walk-Sheet.png-74e44141058c9114b1571eece5eb453d.ctex"]
+source_file="res://assets/Eris Esra's Character Template 4.0/16x16/16x16 Rotate-Sheet.png"
+dest_files=["res://.godot/imported/16x16 Rotate-Sheet.png-3ad075a36ccf23aa3aa47016ed61e29c.ctex"]
 
 [params]
 

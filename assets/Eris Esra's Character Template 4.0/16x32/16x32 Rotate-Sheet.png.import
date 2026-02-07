@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xuwmrwe207b0"
-path="res://.godot/imported/16x16 Rotate-Sheet.png-3da186504053ff0c00d57ed5cd89d531.ctex"
+uid="uid://c6gt0esnxqsel"
+path="res://.godot/imported/16x32 Rotate-Sheet.png-73b12a0e900493f3d4d4f866d22b5e76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Eris Esra's Character Template 4.0/16x16/16x16 Rotate-Sheet.png"
-dest_files=["res://.godot/imported/16x16 Rotate-Sheet.png-3da186504053ff0c00d57ed5cd89d531.ctex"]
+source_file="res://assets/Eris Esra's Character Template 4.0/16x32/16x32 Rotate-Sheet.png"
+dest_files=["res://.godot/imported/16x32 Rotate-Sheet.png-73b12a0e900493f3d4d4f866d22b5e76.ctex"]
 
 [params]
 

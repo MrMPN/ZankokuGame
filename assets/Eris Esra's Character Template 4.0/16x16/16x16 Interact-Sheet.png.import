@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://42j4lgekqn2u"
-path="res://.godot/imported/16x16 Walk-Sheet.png-a6e4cb273c31dd07499f9da489bbee81.ctex"
+uid="uid://3bxus7hrnriy"
+path="res://.godot/imported/16x16 Interact-Sheet.png-e78d117e678b3089f40a2866d8817e9c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Eris Esra's Character Template 4.0/16x16/16x16 Walk-Sheet.png"
-dest_files=["res://.godot/imported/16x16 Walk-Sheet.png-a6e4cb273c31dd07499f9da489bbee81.ctex"]
+source_file="res://assets/Eris Esra's Character Template 4.0/16x16/16x16 Interact-Sheet.png"
+dest_files=["res://.godot/imported/16x16 Interact-Sheet.png-e78d117e678b3089f40a2866d8817e9c.ctex"]
 
 [params]
 

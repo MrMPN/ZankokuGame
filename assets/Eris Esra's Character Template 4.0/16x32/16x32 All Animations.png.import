@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqfqcya2rg5ex"
-path="res://.godot/imported/16x16 Run-Sheet.png-c3ee72e7955a42025995e6bd1e64cdbc.ctex"
+uid="uid://dom71n3w0e07o"
+path="res://.godot/imported/16x32 All Animations.png-cad7011c1e69f73acc55d5eef5202652.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Eris Esra's Character Template 4.0/16x16/16x16 Run-Sheet.png"
-dest_files=["res://.godot/imported/16x16 Run-Sheet.png-c3ee72e7955a42025995e6bd1e64cdbc.ctex"]
+source_file="res://assets/Eris Esra's Character Template 4.0/16x32/16x32 All Animations.png"
+dest_files=["res://.godot/imported/16x32 All Animations.png-cad7011c1e69f73acc55d5eef5202652.ctex"]
 
 [params]
 

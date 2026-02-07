@@ -3,7 +3,7 @@ extends AnimatedSprite2D
 @export var speed: float = 100.0
 
 func _process(delta: float) -> void:
-	var direction = Vector2.ZERO
+	var direction: Vector2 = Vector2.ZERO
 	
 	if Input.is_action_pressed("ui_right"):
 		direction.x += 1

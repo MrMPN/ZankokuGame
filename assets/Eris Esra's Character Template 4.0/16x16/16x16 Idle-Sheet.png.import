@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhrgx1qqy0p4o"
-path="res://.godot/imported/16x16 Idle-Sheet.png-f5bc945a8ea6b2e67cbd724c0f587f99.ctex"
+path="res://.godot/imported/16x16 Idle-Sheet.png-26546eb09fd1d1e2ee15b8f23d53d4c1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Eris Esra's Character Template 4.0/16x16/16x16 Idle-Sheet.png"
-dest_files=["res://.godot/imported/16x16 Idle-Sheet.png-f5bc945a8ea6b2e67cbd724c0f587f99.ctex"]
+source_file="res://assets/Eris Esra's Character Template 4.0/16x16/16x16 Idle-Sheet.png"
+dest_files=["res://.godot/imported/16x16 Idle-Sheet.png-26546eb09fd1d1e2ee15b8f23d53d4c1.ctex"]
 
 [params]
 
