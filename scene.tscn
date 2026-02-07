@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://1ah7k8fohqj5"]
 
 [ext_resource type="Texture2D" uid="uid://cfhgnjyt6ikiu" path="res://Eris Esra's Character Template 4.0/16x32/16x32 Walk-Sheet.png" id="1_ulcgi"]
+[ext_resource type="Script" uid="uid://b720d7byl8o46" path="res://main_character.gd" id="2_yv4w1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nxogm"]
 atlas = ExtResource("1_ulcgi")
@@ -20,19 +21,19 @@ region = Rect2(48, 0, 16, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y2354"]
 atlas = ExtResource("1_ulcgi")
-region = Rect2(0, 64, 16, 32)
+region = Rect2(0, 33, 16, 33)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ni31j"]
 atlas = ExtResource("1_ulcgi")
-region = Rect2(16, 64, 16, 32)
+region = Rect2(16, 33, 16, 33)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xlvrw"]
 atlas = ExtResource("1_ulcgi")
-region = Rect2(32, 64, 16, 32)
+region = Rect2(32, 33, 16, 33)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_73fnb"]
 atlas = ExtResource("1_ulcgi")
-region = Rect2(48, 64, 16, 32)
+region = Rect2(48, 33, 16, 33)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5juve"]
 atlas = ExtResource("1_ulcgi")
@@ -108,5 +109,5 @@ animations = [{
 
 [node name="MainCharacter" type="AnimatedSprite2D" parent="." unique_id=590002924]
 sprite_frames = SubResource("SpriteFrames_gu47o")
-animation = &"walk_up"
-frame_progress = 0.31658098
+animation = &"walk_down"
+script = ExtResource("2_yv4w1")
