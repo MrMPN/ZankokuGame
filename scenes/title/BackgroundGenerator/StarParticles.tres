@@ -1,0 +1,77 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://dx1qcrius0xtl"]
+
+[ext_resource type="Texture2D" uid="uid://cnsd441bt57hu" path="res://BackgroundGenerator/Colorscheme.tres" id="1_5tdag"]
+
+[sub_resource type="Shader" id="1"]
+code = "shader_type particles;
+
+uniform vec2 screen_size;
+uniform sampler2D colorscheme;
+uniform float scale_min = 0.3;
+uniform float scale_max = 0.7;
+uniform float anim_speed = 2.0;
+uniform float glitter_strength = 0.5;
+
+// NEW UNIFORM
+uniform float random_seed = 0.0;
+
+// (Keep helper functions hash/rand_from_seed...)
+float rand_from_seed(inout uint seed) {
+	int k;
+	int s = int(seed);
+	if (s == 0) s = 305420679;
+	k = s / 127773;
+	s = 16807 * (s - k * 127773) - 2836 * k;
+	if (s < 0) s += 2147483647;
+	seed = uint(s);
+	return float(seed % uint(65536)) / 65535.0;
+}
+
+uint hash(uint x) {
+	x = ((x >> uint(16)) ^ x) * uint(73244475);
+	x = ((x >> uint(16)) ^ x) * uint(73244475);
+	x = (x >> uint(16)) ^ x;
+	return x;
+}
+
+void process() {
+	if (RESTART) {
+		// Use the custom random_seed uniform here!
+		uint alt_seed = hash(INDEX + uint(1) + uint(random_seed) + RANDOM_SEED);
+		
+		float pos_x = rand_from_seed(alt_seed) * screen_size.x;
+		float pos_y = rand_from_seed(alt_seed) * screen_size.y;
+		TRANSFORM[3].xyz = vec3(pos_x, pos_y, 0.0);
+		
+		float angle = rand_from_seed(alt_seed) * 6.28318; 
+		float s = mix(scale_min, scale_max, rand_from_seed(alt_seed));
+		
+		float c = cos(angle);
+		float si = sin(angle);
+		
+		TRANSFORM[0].xyz = vec3(c * s, -si * s, 0.0);
+		TRANSFORM[1].xyz = vec3(si * s, c * s, 0.0);
+		TRANSFORM[2].xyz = vec3(0.0, 0.0, s);
+		
+		float col_choice = rand_from_seed(alt_seed);
+		vec4 picked_color = textureLod(colorscheme, vec2(col_choice, 0.5), 0.0);
+		COLOR.rgb = picked_color.rgb;
+		
+		CUSTOM.z = rand_from_seed(alt_seed);
+		VELOCITY = vec3(0.0);
+	}
+	
+	float twinkle = sin(TIME * anim_speed + float(INDEX));
+	float dip = 0.5 + 0.5 * twinkle;
+	COLOR.a = 1.0 - (glitter_strength * (1.0 - dip));
+}"
+
+[resource]
+shader = SubResource("1")
+shader_parameter/screen_size = Vector2(800, 451.5)
+shader_parameter/colorscheme = ExtResource("1_5tdag")
+shader_parameter/scale_min = 0.3
+shader_parameter/scale_max = 0.7
+shader_parameter/anim_speed = 2.0
+shader_parameter/glitter_strength = 0.8
+shader_parameter/random_seed = 0.0

@@ -1,0 +1,6 @@
+[gd_scene format=2]
+
+[ext_resource type="Script" uid="uid://dq7hr2b1kxntn" path="res://scenes/title/Planets/Planet.gd" id="4"]
+
+[node name="Planet" type="Node2D"]
+script = ExtResource( 4 )

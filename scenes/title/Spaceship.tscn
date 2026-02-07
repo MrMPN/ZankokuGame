@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://cs2hgs6mxjm41"]
+
+[ext_resource type="Texture2D" uid="uid://cj4irrlc8hee6" path="res://assets/tiny-spaceships/tinyShip12.png" id="1_p8lcy"]
+[ext_resource type="Script" uid="uid://beg6r8nb2xsc2" path="res://scenes/title/Spaceship.gd" id="1_q1owq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqemp"]
+atlas = ExtResource("1_p8lcy")
+region = Rect2(0, 0, 27, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_013yr"]
+atlas = ExtResource("1_p8lcy")
+region = Rect2(27, 0, 27, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8vmu4"]
+atlas = ExtResource("1_p8lcy")
+region = Rect2(54, 0, 27, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfn3p"]
+atlas = ExtResource("1_p8lcy")
+region = Rect2(81, 0, 27, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhgbh"]
+atlas = ExtResource("1_p8lcy")
+region = Rect2(0, 27, 27, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_skmiq"]
+atlas = ExtResource("1_p8lcy")
+region = Rect2(27, 27, 27, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lf08s"]
+atlas = ExtResource("1_p8lcy")
+region = Rect2(54, 27, 27, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1yhu"]
+atlas = ExtResource("1_p8lcy")
+region = Rect2(81, 27, 27, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7w76"]
+atlas = ExtResource("1_p8lcy")
+region = Rect2(0, 54, 27, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wot2p"]
+atlas = ExtResource("1_p8lcy")
+region = Rect2(27, 54, 27, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvwfe"]
+atlas = ExtResource("1_p8lcy")
+region = Rect2(54, 54, 27, 27)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4tom"]
+atlas = ExtResource("1_p8lcy")
+region = Rect2(81, 54, 27, 27)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q1owq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqemp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_013yr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8vmu4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfn3p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhgbh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skmiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lf08s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n1yhu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7w76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wot2p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvwfe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4tom")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_8n8ju"]
+resource_name = "Accelerate"
+loop_mode = 1
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Spaceship")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.36666667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"", 1.0, false],
+"method": &"play"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8jiwu"]
+_data = {
+&"Accelerate": SubResource("Animation_8n8ju")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_q1owq")
+
+[node name="Spaceship" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+rotation = 1.5707964
+sprite_frames = SubResource("SpriteFrames_q1owq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8jiwu")
+}
+autoplay = "Accelerate"

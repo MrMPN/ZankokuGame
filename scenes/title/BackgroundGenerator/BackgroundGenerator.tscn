@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://bsob6dlqx5rcc"]
+
+[ext_resource type="Script" uid="uid://b8qkmsykmig1w" path="res://BackgroundGenerator/BackgroundGenerator.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://cnsd441bt57hu" path="res://BackgroundGenerator/Colorscheme.tres" id="2"]
+[ext_resource type="Material" uid="uid://b8dedowgpjyyl" path="res://BackgroundGenerator/StarStuff.tres" id="3"]
+[ext_resource type="Texture2D" uid="uid://b4q3omarb7k02" path="res://BackgroundGenerator/stars.png" id="4"]
+[ext_resource type="Material" uid="uid://dx1qcrius0xtl" path="res://BackgroundGenerator/StarParticles.tres" id="5"]
+[ext_resource type="Material" uid="uid://smwlse26kjcb" path="res://BackgroundGenerator/Nebulae.tres" id="6"]
+
+[sub_resource type="CanvasItemMaterial" id="1"]
+particles_animation = true
+particles_anim_h_frames = 16
+particles_anim_v_frames = 1
+particles_anim_loop = true
+
+[node name="BackgroundGenerator" type="Control"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchors_preset = 0
+offset_right = -962.0
+offset_bottom = -500.0
+script = ExtResource("1")
+colorscheme = ExtResource("2")
+glitter_intensity = 0.0
+current_seed = 220777690
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Background" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.0039, 0.0353, 0.0588, 1)
+
+[node name="StarStuff" type="ColorRect" parent="."]
+material = ExtResource("3")
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="StarParticles" type="GPUParticles2D" parent="."]
+texture_filter = 1
+material = SubResource("1")
+amount = 62
+texture = ExtResource("4")
+visibility_rect = Rect2(-1000, -1000, 2000, 2000)
+process_material = ExtResource("5")
+
+[node name="Nebulae" type="ColorRect" parent="."]
+visible = false
+material = ExtResource("6")
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="StarContainer" type="Node2D" parent="."]
+texture_filter = 1
+
+[node name="PlanetContainer" type="Node2D" parent="."]
+visible = false
+
+[node name="PauseParticles" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="PauseParticles" to="." method="_on_PauseParticles_timeout"]

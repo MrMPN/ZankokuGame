@@ -1,0 +1,11 @@
+[gd_resource type="GradientTexture2D" format=3 uid="uid://cnsd441bt57hu"]
+
+[sub_resource type="Gradient" id="1"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0, 0.143, 0.286, 0.429, 0.571, 0.714, 0.857, 1)
+colors = PackedColorArray(0.1255, 0.1333, 0.0824, 1, 0.2275, 0.1569, 0.0078, 1, 0.5882, 0.2353, 0.2353, 1, 0.7922, 0.3529, 0.1804, 1, 1, 0.4706, 0.1922, 1, 0.9529, 0.6, 0.2863, 1, 0.9216, 0.7608, 0.4588, 1, 0.8745, 0.8431, 0.5216, 1)
+
+[resource]
+gradient = SubResource("1")
+width = 8
+height = 1
