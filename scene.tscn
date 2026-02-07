@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://1ah7k8fohqj5"]
+
+[ext_resource type="Texture2D" uid="uid://cfhgnjyt6ikiu" path="res://Eris Esra's Character Template 4.0/16x32/16x32 Walk-Sheet.png" id="1_ulcgi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxogm"]
+atlas = ExtResource("1_ulcgi")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3253y"]
+atlas = ExtResource("1_ulcgi")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3cyc"]
+atlas = ExtResource("1_ulcgi")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7jmp"]
+atlas = ExtResource("1_ulcgi")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2354"]
+atlas = ExtResource("1_ulcgi")
+region = Rect2(0, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ni31j"]
+atlas = ExtResource("1_ulcgi")
+region = Rect2(16, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlvrw"]
+atlas = ExtResource("1_ulcgi")
+region = Rect2(32, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_73fnb"]
+atlas = ExtResource("1_ulcgi")
+region = Rect2(48, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5juve"]
+atlas = ExtResource("1_ulcgi")
+region = Rect2(0, 128, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fy5k1"]
+atlas = ExtResource("1_ulcgi")
+region = Rect2(16, 128, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5c1cw"]
+atlas = ExtResource("1_ulcgi")
+region = Rect2(32, 128, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akxrc"]
+atlas = ExtResource("1_ulcgi")
+region = Rect2(48, 128, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gu47o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxogm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3253y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3cyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7jmp")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2354")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ni31j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xlvrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_73fnb")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5juve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fy5k1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5c1cw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akxrc")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[node name="Scene" type="Node2D" unique_id=247078000]
+
+[node name="MainCharacter" type="AnimatedSprite2D" parent="." unique_id=590002924]
+sprite_frames = SubResource("SpriteFrames_gu47o")
+animation = &"walk_up"
+frame_progress = 0.31658098
