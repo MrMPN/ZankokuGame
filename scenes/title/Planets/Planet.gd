@@ -1,3 +1,4 @@
+@tool 
 extends Node2D
 
 var time: float = 1000.0
@@ -6,7 +7,7 @@ var original_colors: PackedColorArray
 @export var relative_scale : float = 1.0
 @export var gui_zoom : float = 1.0
 
-@export var pixels: float = 1000.0:
+@export var pixels: float = 100.0:
 	set(value):
 		pixels = value
 		if is_node_ready():

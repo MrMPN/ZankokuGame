@@ -1,3 +1,4 @@
+@tool
 extends "res://scenes/title/Planets/Planet.gd"
 
 

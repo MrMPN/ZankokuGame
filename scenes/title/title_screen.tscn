@@ -4,7 +4,6 @@
 [ext_resource type="AudioStream" uid="uid://cge6iqt3ftsbs" path="res://assets/music/space.mp3" id="1_v6p8y"]
 [ext_resource type="PackedScene" uid="uid://bsob6dlqx5rcc" path="res://scenes/title/BackgroundGenerator/BackgroundGenerator.tscn" id="2_05l2w"]
 [ext_resource type="Shader" uid="uid://cuccwwrqh5rdr" path="res://scenes/title/crt.gdshader" id="2_jqemp"]
-[ext_resource type="PackedScene" uid="uid://bgah3ujav5t77" path="res://scenes/title/Planets/Galaxy/Galaxy.tscn" id="5_8vmu4"]
 [ext_resource type="PackedScene" uid="uid://chh0bjjvjt2v8" path="res://scenes/title/Planets/LandMasses/LandMasses.tscn" id="5_hafda"]
 [ext_resource type="PackedScene" uid="uid://cs2hgs6mxjm41" path="res://scenes/title/Spaceship.tscn" id="6_jqemp"]
 [ext_resource type="FontFile" uid="uid://bsgubkk105ghv" path="res://assets/fonts/PublicPixel-rv0pA.ttf" id="6_tpml5"]
@@ -52,10 +51,7 @@ anchor_mode = 0
 [node name="Planet" parent="." unique_id=1295527981 instance=ExtResource("5_hafda")]
 position = Vector2(600, 300)
 scale = Vector2(0.4, 0.4)
-
-[node name="Galaxy" parent="Planet" unique_id=1943168130 instance=ExtResource("5_8vmu4")]
-position = Vector2(-692.49994, 22.499998)
-pixels = 100.0
+pixels = 50.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1267663754]
 
@@ -97,7 +93,6 @@ target_node = NodePath("../Planet")
 sprite_rotation_offset = 90.0
 
 [node name="CRT" type="CanvasLayer" parent="." unique_id=1578284873]
-visible = false
 
 [node name="ColorRect" type="ColorRect" parent="CRT" unique_id=2130870447]
 material = SubResource("ShaderMaterial_013yr")

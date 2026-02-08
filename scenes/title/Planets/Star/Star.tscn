@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://clqvlybt45o7r"]
 
-[ext_resource type="Script" path="res://Planets/Star/Star.gd" id="1"]
-[ext_resource type="Shader" path="res://Planets/Star/StarBlobs.gdshader" id="2"]
-[ext_resource type="Shader" path="res://Planets/Star/StarFlares.gdshader" id="3"]
-[ext_resource type="Shader" path="res://Planets/Star/Star.gdshader" id="4"]
+[ext_resource type="Script" path="res://scenes/title/Planets/Star/Star.gd" id="1"]
+[ext_resource type="Shader" path="res://scenes/title/Planets/Star/StarBlobs.gdshader" id="2"]
+[ext_resource type="Shader" path="res://scenes/title/Planets/Star/StarFlares.gdshader" id="3"]
+[ext_resource type="Shader" path="res://scenes/title/Planets/Star/Star.gdshader" id="4"]
 
 [sub_resource type="ShaderMaterial" id="1"]
 shader = ExtResource("2")
