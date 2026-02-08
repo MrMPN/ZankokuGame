@@ -6,7 +6,7 @@ extends AnimatedSprite2D
 var _idle_timer: float = 0.0
 
 func _process(delta: float) -> void:
-	var direction = Vector2.ZERO
+	var direction: Vector2 = Vector2.ZERO
 	
 	if Input.is_action_pressed("ui_right"):
 		direction.x += 1
@@ -35,7 +35,7 @@ func _process(delta: float) -> void:
 			frame = 0
 
 func play_walk_animation(direction: Vector2) -> void:
-	var new_anim = animation
+	var new_anim: StringName = animation
 	if abs(direction.x) > abs(direction.y):
 		new_anim = "walk_right"
 		flip_h = direction.x < 0
@@ -45,8 +45,8 @@ func play_walk_animation(direction: Vector2) -> void:
 	
 	if animation != new_anim:
 		# Save current frame to keep the walk cycle synchronized across directions
-		var current_frame = frame
-		var current_progress = frame_progress
+		var current_frame: int = frame
+		var current_progress: int = frame_progress
 		play(new_anim)
 		# Ensure we don't snap to a different leg phase if the animation was stopped
 		if current_frame != 0 or current_progress > 0:

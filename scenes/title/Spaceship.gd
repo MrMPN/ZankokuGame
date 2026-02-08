@@ -60,5 +60,5 @@ func _process(delta: float) -> void:
 	
 	# Scaling down as it approaches the planet (simulating distance)
 	# Start at scale 1.0, end at 0.1
-	var s = lerp(1.0, 0.1, t_scale)
+	var s: float = lerp(1.0, 0.1, t_scale)
 	scale = Vector2(s, s)
