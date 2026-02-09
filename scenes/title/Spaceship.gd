@@ -1,5 +1,7 @@
 extends Node2D
 
+signal flight_finished
+
 @export var flight_time: float = 60.0 # Time in seconds for one flight
 @export var target_node: Node2D
 @export var arc_height: float = 150.0
@@ -11,6 +13,20 @@ var control_point: Vector2
 var progress: float = 0.0
 
 func _ready() -> void:
+	_refresh_flight_path()
+	position = start_position
+	set_process(false)
+
+func start_flight() -> void:
+	progress = 0.0
+	_refresh_flight_path()
+	position = start_position
+	scale = Vector2.ONE
+	show()
+	$Spaceship.play("default")
+	set_process(true)
+
+func _refresh_flight_path() -> void:
 	if target_node:
 		target_position = target_node.global_position
 	else:
@@ -19,21 +35,20 @@ func _ready() -> void:
 
 	# Initial position off-screen left
 	start_position = Vector2(-100, get_viewport_rect().size.y * 0.7)
-	position = start_position
-	
+
 	# Create a control point for the Bezier arc
 	# It's roughly in the middle but offset upwards
 	var mid_point: Vector2 = (start_position + target_position) / 2.0
 	control_point = mid_point + Vector2(0, -arc_height)
-	
-	$Spaceship.play("default")
 
 func _process(delta: float) -> void:
-	progress += delta / flight_time
+	progress += delta / max(flight_time, 0.001)
 	
 	if progress > 1.0:
 		hide()
+		$Spaceship.stop()
 		set_process(false)
+		flight_finished.emit()
 		return
 
 	# Quadratic Bezier formula: (1-t)^2 * P0 + 2(1-t)t * P1 + t^2 * P2
