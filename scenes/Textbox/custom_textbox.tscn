@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://bkhcnhq2dgvvk"]
+
+[ext_resource type="Script" uid="uid://bp2rtl8h4nncf" path="res://scenes/Textbox/textbox_layer.gd" id="1_7jt4d"]
+[ext_resource type="StyleBox" uid="uid://xt2m6n2xx2x4" path="res://scenes/Textbox/pixel_textbox_stylebox.tres" id="2_3iqu8"]
+[ext_resource type="Script" uid="uid://bak74s0kcr0ao" path="res://addons/dialogic/Modules/Text/node_name_label.gd" id="2_y0h34"]
+[ext_resource type="Script" uid="uid://drhfq6rmdeuri" path="res://addons/dialogic/Modules/Text/node_dialog_text.gd" id="3_11puy"]
+[ext_resource type="Script" uid="uid://dpv2dfiv5dhmr" path="res://addons/dialogic/Modules/Text/node_type_sound.gd" id="5_sr2qw"]
+
+[node name="TextboxWithSpeakerPortrait" type="Control" unique_id=2115099393]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_7jt4d")
+text_use_global_size = false
+text_custom_size = 12
+name_label_use_global_size = false
+name_label_custom_size = 10
+box_panel = "res://scenes/Textbox/pixel_textbox_stylebox.tres"
+box_modulate_global_color = false
+box_modulate_custom_color = Color(1, 1, 1, 1)
+box_distance = 20
+editor_preview_enabled = true
+editor_preview_name = ""
+
+[node name="Anchor" type="Control" parent="." unique_id=1905246999]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="Panel" type="PanelContainer" parent="Anchor" unique_id=1188203615]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -120.0
+offset_right = 200.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("2_3iqu8")
+
+[node name="HBox" type="HBoxContainer" parent="Anchor/Panel" unique_id=1955130814]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Anchor/Panel/HBox" unique_id=734795687]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+
+[node name="DialogicNode_NameLabel" type="Label" parent="Anchor/Panel/HBox/VBoxContainer" unique_id=573337193]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 10
+text = "Speaker"
+script = ExtResource("2_y0h34")
+hide_when_empty = false
+use_character_color = false
+
+[node name="DialogicNode_DialogText" type="RichTextLabel" parent="Anchor/Panel/HBox/VBoxContainer" unique_id=608037467 node_paths=PackedStringArray("textbox_root")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_constants/line_separation = 1
+theme_override_font_sizes/normal_font_size = 12
+theme_override_font_sizes/bold_font_size = 12
+theme_override_font_sizes/bold_italics_font_size = 12
+theme_override_font_sizes/italics_font_size = 12
+bbcode_enabled = true
+text = "This is a textbox preview in the scene editor."
+scroll_following = true
+visible_characters_behavior = 1
+script = ExtResource("3_11puy")
+alignment = 1
+textbox_root = NodePath("../../..")
+start_hidden = false
+
+[node name="DialogicNode_TypeSounds" type="AudioStreamPlayer" parent="Anchor/Panel/HBox/VBoxContainer/DialogicNode_DialogText" unique_id=51687125]
+script = ExtResource("5_sr2qw")

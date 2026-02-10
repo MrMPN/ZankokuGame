@@ -28,8 +28,13 @@ gdscript/warnings/untyped_declaration=2
 [dialogic]
 
 directories/dch_directory={}
-directories/dtl_directory={}
-layout/style_directory={}
+directories/dtl_directory={
+"timeline": "res://dialogs/timeline.dtl"
+}
+layout/style_directory={
+"": "res://dialogs/imageless_dialogbox.tres",
+"imageless_dialogbox": "res://dialogs/imageless_dialogbox.tres"
+}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -64,8 +69,9 @@ audio/channel_defaults={
 }
 }
 variables={}
-layout/style_list=[]
-layout/default_style="Default"
+layout/style_list=["res://dialogs/imageless_dialogbox.tres"]
+layout/default_style="res://dialogs/imageless_dialogbox.tres"
+glossary/default_case_sensitive=true
 
 [display]
 

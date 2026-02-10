@@ -20,6 +20,7 @@ func _input(event: InputEvent) -> void:
 		_is_starting = true
 		start_label.hide()
 		start_requested.emit()
+		Dialogic.start("res://dialogs/timeline.dtl")
 
 func _on_spaceship_flight_finished() -> void:
 	start_pressed.emit()
