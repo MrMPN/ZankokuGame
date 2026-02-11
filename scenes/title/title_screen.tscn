@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cs2hgs6mxjm41" path="res://scenes/title/Spaceship.tscn" id="6_jqemp"]
 [ext_resource type="FontFile" uid="uid://bsgubkk105ghv" path="res://assets/fonts/PublicPixel-rv0pA.ttf" id="6_tpml5"]
 [ext_resource type="Script" uid="uid://bt6htcr0w0ruc" path="res://scenes/title/rich_text_pulse.gd" id="7_pulse"]
+[ext_resource type="AudioStream" uid="uid://dt3wc771mdvgb" path="res://assets/sounds/sci-fi-sound-space-noise.mp3" id="8_intro_sfx"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_013yr"]
 shader = ExtResource("2_jqemp")
@@ -45,6 +46,10 @@ current_seed = 2988667573
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=454730810]
 stream = ExtResource("1_v6p8y")
 autoplay = true
+
+[node name="IntroSoundPlayer" type="AudioStreamPlayer" parent="." unique_id=1848897381]
+stream = ExtResource("8_intro_sfx")
+volume_db = -80.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=658915509]
 anchor_mode = 0
@@ -89,7 +94,7 @@ vertical_alignment = 1
 custom_effects = [ExtResource("7_pulse")]
 
 [node name="Spaceship" parent="." unique_id=1017500515 node_paths=PackedStringArray("target_node") instance=ExtResource("6_jqemp")]
-flight_time = 40.0
+flight_time = 50.0
 target_node = NodePath("../Planet")
 sprite_rotation_offset = 90.0
 
