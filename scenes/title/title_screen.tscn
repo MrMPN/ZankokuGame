@@ -22,6 +22,7 @@ shader_parameter/blur = 0.05
 
 [node name="TitleScreen" type="Node2D" unique_id=1435964765]
 script = ExtResource("1_05l2w")
+music_fade_duration = 10.0
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=342277502]
 offset_right = 800.0
@@ -88,7 +89,7 @@ vertical_alignment = 1
 custom_effects = [ExtResource("7_pulse")]
 
 [node name="Spaceship" parent="." unique_id=1017500515 node_paths=PackedStringArray("target_node") instance=ExtResource("6_jqemp")]
-flight_time = 50.0
+flight_time = 40.0
 target_node = NodePath("../Planet")
 sprite_rotation_offset = 90.0
 
