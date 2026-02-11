@@ -99,6 +99,7 @@ target_node = NodePath("../Planet")
 sprite_rotation_offset = 90.0
 
 [node name="CRT" type="CanvasLayer" parent="." unique_id=1578284873]
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="CRT" unique_id=2130870447]
 material = SubResource("ShaderMaterial_013yr")
